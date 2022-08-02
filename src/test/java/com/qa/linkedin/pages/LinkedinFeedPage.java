@@ -11,7 +11,10 @@ import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 
 import com.qa.linkedin.util.BasePageWebActions;
-
+/**
+*This class has all the objects and methods after login to the linkedin
+*
+*/
 public class LinkedinFeedPage extends BasePageWebActions{
 
 	private Logger log=Logger.getLogger(LinkedinFeedPage.class);
