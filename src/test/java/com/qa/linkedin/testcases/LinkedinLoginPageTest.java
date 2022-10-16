@@ -1,17 +1,18 @@
 package com.qa.linkedin.testcases;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 import com.qa.linkedin.base.TestBase;
 import com.qa.linkedin.pages.LinkedinHomePage;
 import com.qa.linkedin.pages.LinkedinLoginPage;
 
-import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 
 public class LinkedinLoginPageTest extends TestBase{
-  private Logger log=Logger.getLogger(LinkedinLoginPageTest.class);
+    private Logger log= LogManager.getLogger(LinkedinLoginPageTest.class);
   LinkedinLoginPage loginPg;
   LinkedinHomePage homePg;
   @BeforeClass

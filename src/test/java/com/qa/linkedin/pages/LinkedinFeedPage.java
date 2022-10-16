@@ -1,8 +1,7 @@
 package com.qa.linkedin.pages;
-
-
-
-import org.apache.log4j.Logger;
+import com.qa.linkedin.testcases.LinkedinFeedPageTest;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
@@ -17,7 +16,7 @@ import com.qa.linkedin.util.BasePageWebActions;
 */
 public class LinkedinFeedPage extends BasePageWebActions{
 
-	private Logger log=Logger.getLogger(LinkedinFeedPage.class);
+	private Logger log= LogManager.getLogger(LinkedinFeedPageTest.class);
 	
 	public LinkedinFeedPage() {
 		PageFactory.initElements(driver,this);

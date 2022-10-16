@@ -3,21 +3,21 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
-
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
 public class ExcelUtils {
-	private static Logger log = Logger.getLogger(ExcelUtils.class);
+	private Logger log= LogManager.getLogger(ExcelUtils.class);
 	public FileInputStream fis = null;
 	public FileOutputStream fileOut = null;
 	private XSSFWorkbook workbook = null;
 	private XSSFSheet sheet = null;
 	/**
 	 * this Method is used to read the data from excelsheets
-	 * @param fpath
+	 * @param path
 	 * @param sheetName
 	 * @return
 	 * @throws InvalidFormatException

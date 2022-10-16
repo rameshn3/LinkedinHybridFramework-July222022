@@ -6,8 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
-
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
@@ -21,12 +20,13 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 public class TestBase {
 
 	public static WebDriver driver;
 	public WebDriverWait wait;
-	private static Logger log=Logger.getLogger(TestBase.class);
+	private static final Logger log = LogManager.getLogger(TestBase.class);
 	
 	/**
 	 * This method reads the property value from properties file

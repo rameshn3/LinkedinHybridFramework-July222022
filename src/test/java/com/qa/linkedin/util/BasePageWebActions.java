@@ -10,7 +10,8 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Random;
 import java.util.TimeZone;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
@@ -29,7 +30,7 @@ import org.testng.Assert;
 import com.qa.linkedin.base.TestBase;
 public class BasePageWebActions extends TestBase {
 
-	private Logger log = Logger.getLogger(BasePageWebActions.class);
+	private Logger log= LogManager.getLogger(BasePageWebActions.class);
 	Actions act;
 	// Constructor
 	public BasePageWebActions() {

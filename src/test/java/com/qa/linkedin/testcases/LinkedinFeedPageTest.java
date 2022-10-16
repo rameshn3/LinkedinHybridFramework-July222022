@@ -1,5 +1,7 @@
 package com.qa.linkedin.testcases;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 import com.qa.linkedin.base.TestBase;
@@ -9,12 +11,11 @@ import com.qa.linkedin.pages.LinkedinLoginPage;
 
 import java.io.IOException;
 
-import org.apache.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 
 public class LinkedinFeedPageTest extends TestBase{
-	private Logger log=Logger.getLogger(LinkedinFeedPageTest.class);
+	private Logger log= LogManager.getLogger(LinkedinFeedPageTest.class);
 	LinkedinLoginPage loginPg;
 	  LinkedinHomePage homePg;
 	  LinkedinFeedPage feedPg;

@@ -1,5 +1,7 @@
 package com.qa.linkedin.testcases;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.Test;
 
 import com.qa.linkedin.base.TestBase;
@@ -10,8 +12,6 @@ import com.qa.linkedin.pages.LinkedinSearchResultsPage;
 import com.qa.linkedin.util.ExcelUtils;
 
 import java.io.IOException;
-
-import org.apache.log4j.Logger;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
@@ -20,8 +20,8 @@ import org.testng.annotations.DataProvider;
 public class LinkedinSearchResultsTest extends TestBase{
 
 	private static String filePath=System.getProperty("user.dir")+"\\src\\test\\java\\com\\qa\\linkedin\\data\\testData.xlsx";
-	
-  private Logger log=Logger.getLogger(LinkedinSearchResultsTest.class);
+
+	private Logger log= LogManager.getLogger(LinkedinSearchResultsTest.class);
   LinkedinLoginPage loginPg;
   LinkedinHomePage homePg;
   LinkedinFeedPage feedPg;

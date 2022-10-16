@@ -3,15 +3,17 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Date;
 
+import com.qa.linkedin.pages.LinkedinLoginPage;
 import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.testng.log4testng.Logger;
 
 import com.qa.linkedin.base.TestBase;
 
 public class TestUtil extends TestBase{
-private static Logger log = Logger.getLogger(TestUtil.class);
+	private static Logger log= LogManager.getLogger(TestUtil.class);
 public static String captureScreenshot(String methodName) throws IOException {
 		
 		String fileName=getScreenshotName(methodName);
